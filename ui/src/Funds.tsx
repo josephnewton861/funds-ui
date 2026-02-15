@@ -5,7 +5,7 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import './App.css'
-import Accoridion from './components/Accoridion'
+import Accordion from './components/Accordion'
 
 const App = () => {
   // const [count, setCount] = useState(0)
@@ -30,7 +30,7 @@ const App = () => {
   return (
     <>
       <h1>Funds List</h1>
-      <Accoridion funds={funds} />
+      <Accordion funds={funds} />
     </>
   )
 }

@@ -16,7 +16,7 @@ const Rating = ({ rating, length = 5 }: RatingProps) => {
             width: '12px',
             height: '12px',
             borderRadius: '50%',
-            backgroundColor: i < rating ? 'darkRed' : '#e9ecef',
+            backgroundColor: i < rating ? 'darkRed' : '#grey',
             marginRight: '4px',
           }}
         />
