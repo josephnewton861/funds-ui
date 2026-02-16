@@ -11,5 +11,5 @@ createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
       <Funds />
     </BrowserRouter>
-  </StrictMode>,
+  </StrictMode>
 )
