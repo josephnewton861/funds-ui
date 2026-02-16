@@ -7,6 +7,7 @@ type RatingProps = {
 const Rating = ({ rating, length = 5 }: RatingProps) => {
   if (!rating) return <span>—</span>;
   return (
+    // Display a filled circle for each rating value
     <span>
       {[...Array(length)].map((_, i) => (
         <span

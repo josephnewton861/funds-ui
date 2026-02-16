@@ -1,38 +1,25 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-
-import { useState, useEffect } from 'react'
-import axios from 'axios'
-import './App.css'
-import Accordion from './components/Accordion'
-
-const App = () => {
-  // const [count, setCount] = useState(0)
-  const [funds, setFunds] = useState([]);
-
-  useEffect(() => {
-    const loadFunds = async () => await fetchFunds();
-    loadFunds();
-  }, [])
+import './App.css';
+import Header from './components/Header';
+import Error from './Error';
+import { Routes, Route } from "react-router-dom";
+import TooltipInitialiser from './components/TooltipInitialiser';
+import Dashboard from './Dashboard';
 
 
-  const fetchFunds = async () => {
-    try {
-      const response = await axios.get('http://localhost:3000/funds');
-      console.log('Fetched funds:', response.data);
-      setFunds(response.data);
-    } catch (error) {
-      console.error('Error fetching funds:', error);
-    }
-  }
-
+const Funds = () => {
   return (
     <>
-      <h1>Funds List</h1>
-      <Accordion funds={funds} />
+      <Header />
+      <div>
+          <Routes>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/error" element={<Error />} />
+              <Route path="*" element={<Error />} />
+          </Routes>
+          <TooltipInitialiser />
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default Funds;

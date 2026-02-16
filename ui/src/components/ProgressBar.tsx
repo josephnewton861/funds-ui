@@ -1,3 +1,4 @@
+// Display a progress bar with a percentage value.
 const ProgresBar = ({ percentage }: { percentage: number }) => {
   return (
     <div style={{ width: '100%', backgroundColor: '#eee', height: '20px' }}>

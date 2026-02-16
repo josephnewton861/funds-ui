@@ -7,7 +7,7 @@ type Document = {
 const AdditionalInfo = ({ document }: { document: Document }) => {
     return (
         <div className="additional-info">
-            <p><strong>{document.type}: </strong><a href={document.url} target="_blank" rel="noopener noreferrer">{document.url}</a></p>
+            <p><strong>{document.type}: </strong><a href={document.url} target="_blank">{document.url}</a></p>
         </div>
     );
 }
