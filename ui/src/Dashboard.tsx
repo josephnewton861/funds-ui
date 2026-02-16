@@ -58,16 +58,25 @@ const Dashboard = () => {
 
     return (
         <div className="mt-3">
-        <h2>
-            This Dashboard is designed to help you understand each fund option more clearly. 
-            Feel free to analyse the table and click the view break down link for additional information on an individual fund.
-        </h2>
-        <Table
-            funds={funds}
-            loading={loading}
-            selectedFundId={selectedFundId}
-            onToggleRow={toggleRow}
-        />
+            <div className="alert alert-light border shadow-sm mb-4">
+                <h4 className="fw-bold mb-2">
+                    <i className="bi bi-info-circle-fill me-2 text-primary"></i>
+                    Fund Dashboard Overview
+                </h4>
+
+                <p className="mb-0 text-secondary">
+                    This dashboard helps you explore each investment fund option more clearly.  
+                    Use the table below to review performance, charges, and risk metrics.  
+                    Click <strong>View breakdown</strong> to see a detailed asset allocation,
+                    holdings, and fund documents.
+                </p>
+            </div>
+            <Table
+                funds={funds}
+                loading={loading}
+                selectedFundId={selectedFundId}
+                onToggleRow={toggleRow}
+            />
         </div>
     );
 };
